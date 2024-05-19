@@ -1,0 +1,126 @@
+// // WIP Code (May 15, '24) Prev Code
+
+
+// #include<iostream>
+// #include<list>
+// #include<unordered_map>
+// #include<queue>
+// using namespace std;
+
+// class Graph{
+//     public:
+
+//     unordered_map<int, list<int>> adj;
+//     void addEdge(int u, int v, bool direction){
+//         adj[u].push_back(v);
+//         // if direction = 0 --> Undirected
+//         // if durection = 1 --> Directed
+//         if (direction == 0){
+//             adj[v].push_back(u);
+//         }
+//     }
+
+//     void printGraph(){
+//         for(auto i:adj){
+//             cout<<i.first<<"->";
+//             for (auto j:i.second){
+//                 cout<<j<<" ";
+//             }
+//             cout<<endl;
+//         }
+//         // cout<<"End of Graph Printing!"<<endl;
+//     }
+
+//     void BFS_traversal(int node){
+//         unordered_map<int, bool> visited;
+//         for (auto i:adj){                       // Making of visited map for tracking visited nodes in queue.
+//             visited[i.first] = false;
+//         }
+
+//         list<int> traversal;
+//         queue<int> visitedQueue;
+//         BFS_main(int node, unordered_map<int, bool> &visited, queue<int> &visitedQueue);
+//     }
+
+//     void BFS_main(int node, &visited, &visitedQueue){
+//         // cout<<"Start of BFS_traversal Printing!"<<endl;
+        
+//         int head = node;                        // We will need a starting head to start our traversing our graph.
+//         visitedQueue.push(head);
+//         visited[head] = true;
+        
+//         while (visitedQueue.empty() == false){  // Iterating over the queue.
+//             int curr = visitedQueue.front();    // Taking the front element of queue.
+//             for (auto i:adj[curr]){             // Iterating over the neighbours of front element of the queue.
+//                 if (!visited[i]){               // Checking if the neighbour is not visited before.
+//                     visitedQueue.push(i);       // Push it to queue if not visited before.
+//                     visited[i] = true;          // Marking the neighbour true in visited queue.
+//                 }
+//             }
+//             cout<<curr<<" ";                    // Printing the front element.
+//             // traversal.push_back(curr);
+//             visitedQueue.pop();                 // Popping the front element.
+//         }  
+
+//         // for (int i=0; i<traversal.size(); i++){
+//         //     cout<<traversal[i]<<" ";
+//         // }
+//         cout<<endl;
+//     }
+
+//     // void DFS_traversal(int &node){
+//     //     unordered_map<int, bool> visited;
+//     //     list<int> traversal;
+//     //     for (auto i:adj){                       // Making of visited map for tracking visited nodes in queue.
+//     //         visited[i.first] = false;
+//     //     }
+//     //     DFS_traversal_implementation(node, unordered_map<int, bool> &visited);
+
+//     // }
+
+//     // void DFS_traversal_implementation(int &node, ){
+//     //     // cout<<"Start of BFS_traversal Printing!"<<endl;
+        
+//     //     cout<<node<<" ";
+//     //     for (auto i:adj[node]){
+//     //         if (!visited[i]){
+//     //             DFS_traversal(i);
+//     //         }
+//     //     }
+
+
+//     // }
+// };
+
+// int main(){
+//     int n, m;
+//     cout<<"Enter the number of nodes"<<endl;
+//     cin>>n;
+
+//     cout<<"Enter the number of edges"<<endl;
+//     cin>>m;
+//     Graph g;
+//     int head;
+    
+//     for(int i=0; i<m; i++){
+//         int u, v;
+//         cin>>u>>v;
+//         if (i == 0){                            // Making the first element of graph as head of it.
+//             head = u;
+//         }
+//         g.addEdge(u,v,0);
+        
+//     }
+//     g.printGraph();
+
+
+//     g.BFS_traversal(head);
+//     // g.DFS_traversal(head);
+// }
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// // WIP Code - May 16 (Cycle Detection Code, BFS & DFS already implemented)
+
+// // WIP Code (May 15, '24)
